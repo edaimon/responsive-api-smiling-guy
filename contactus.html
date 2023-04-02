@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7bcc306e1e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="/scripts/scripts.js"></script>
+
+
+    <title>Document </title>
+</head>
+
+<header>
+    <div class="top-nav">
+        <a href="index.html"><img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" /></a>
+
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+
+
+        <ul class="menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/project.html">Projects</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li class="contact-only-mobile"><a href="contactus.html">Contact Us</a></li>
+
+        </ul>
+
+        <ul class="menu button-top-nav">
+            <li><a href="/contactus.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+
+</header>
+
+
+
+
+<body>
+    <div class="formOutterDiv">
+
+        <h1>Contact Us</h1>
+        <form name="myForm" method="post" onsubmit="return validateForm()" onsubmit="myFunction" ()>
+            <label class="bodyIntrotextRegular" for="fname">Full Name*</label>
+            <input class="formFieldBackgroundColor formFieldStylingfirst3fields allFormFields" type="text" id="fname"
+                name="fname" placeholder="Enter your full name" required>
+
+            <br>
+
+            <div class="sideBySide">
+
+                <div class="box1">
+                    <label class="bodyIntrotextRegular" for="email">Email</label>
+                    <input class="formFieldBackgroundColor formFieldStylingfirst3fields allFormFields" type="email"
+                        id="email" name="email" placeholder="Enter your email address">
+
+
+                </div>
+                <div class="box1">
+                    <label class="bodyIntrotextRegular" for="phone">Phone</label>
+                    <input class="formFieldBackgroundColor formFieldStylingfirst3fields allFormFields" type="tel"
+                        id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+            </div>
+
+
+            <label class="bodyIntrotextRegular" for="textarea">Message</label>
+
+            <textarea class="formFieldBackgroundColor formFieldStylingLastField allFormFields" rows="5" cols="33"
+                placeholder="Write your message here" required></textarea>
+
+
+            <input class="buttonStyles headLinetextMedium" type="submit" value="Submit">
+
+
+
+            <script>
+                function validateForm() {
+                    let x = document.forms["myForm"]["email"].value;
+                    let y = document.forms["myForm"]["fname"].value;
+                    if (x == "") {
+                        alert("We need your email so we can get back to you :)");
+                        return false;
+
+                    }
+                    if (y == "ironhack") {
+
+                        alert("Sorry, you cannot be ironhack, because I am ironhack. Try ironhack1 :)");
+                        //  document.forms["myForm"]["email"].style.border = "1px solid ";
+                        //document.getElementById("emailmsg").innerHTML = "Not a valid e-mail address";
+                        return false;
+                    }
+                }</script>
+
+        </form>
+    </div>
+
+</body>
+
+
+<footer>
+
+    <div class="footerOuter">
+        <div class="logoandText">
+            <a href="index.html"><img src="/project-assets/logos/circle.svg" alt=""></a>
+
+            <p class="headLinetextRegular">2972 Westheimer Rd. Santa Ana,</p>
+            <p class="headLinetextRegular"> Illinois 85486 </p>
+
+        </div>
+        <div class="footerInfoLists">
+            <ul class="headLinetextRegular">
+                <li>
+                    Team
+
+                </li>
+                <li>
+                    Services
+
+                </li>
+                <li>
+
+                    About Us
+                </li>
+
+            </ul>
+
+            <ul class="headLinetextRegular">
+                <li>
+                    Press
+
+                </li>
+                <li>
+                    Projects
+
+                </li>
+
+                <li>
+                    Privacy Policy
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+
+</html>
